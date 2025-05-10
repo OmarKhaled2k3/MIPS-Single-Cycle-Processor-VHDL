@@ -1,0 +1,46 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS_Test_isim_beh.exe" -prj "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS_Test_beh.prj" "work.MIPS_Test" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/Registers.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/mux.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/sign_extend.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/shifter_32_32.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/PC.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/memory.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/instruction_to_reg.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/instruction_memo.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/ControlUnit.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/ALUCTRL.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/alu.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/Adder_32.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS_Test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity Adder_32 [adder_32_default]
+Compiling architecture behavioral of entity mux [\mux(32)\]
+Compiling architecture behavioral of entity PC [pc_default]
+Compiling architecture behavioral of entity instruction_memo [instruction_memo_default]
+Compiling architecture behavioral of entity ControlUnit [controlunit_default]
+Compiling architecture behavioral of entity mux [\mux(5)\]
+Compiling architecture behavioral of entity Registers [registers_default]
+Compiling architecture behavioral of entity instruction_to_reg [instruction_to_reg_default]
+Compiling architecture behavioral of entity sign_extend [sign_extend_default]
+Compiling architecture behavioral of entity shifter_32_32 [shifter_32_32_default]
+Compiling architecture behavioral of entity ALUOP [aluop_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity memo [memo_default]
+Compiling architecture behavioral of entity MIPS [mips_default]
+Compiling architecture behavior of entity mips_test
+Time Resolution for simulation is 1ps.
+Compiled 34 VHDL Units
+Built simulation executable C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS_Test_isim_beh.exe
+Fuse Memory Usage: 35692 KB
+Fuse CPU Usage: 436 ms

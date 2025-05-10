@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS_Test_isim_beh.exe" -prj "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS_Test_beh.prj" "work.MIPS_Test" 

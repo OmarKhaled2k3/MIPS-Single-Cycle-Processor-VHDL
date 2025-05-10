@@ -1,0 +1,1164 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: MIPS.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MIPS.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MIPS"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : MIPS
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/mux.vhd" in Library work.
+Entity <mux> compiled.
+Entity <mux> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/Registers.vhd" in Library work.
+Entity <registers> compiled.
+Entity <registers> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/Adder_32.vhd" in Library work.
+Entity <adder_32> compiled.
+Entity <adder_32> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/PC.vhd" in Library work.
+Entity <pc> compiled.
+Entity <pc> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/instruction_memo.vhd" in Library work.
+Entity <instruction_memo> compiled.
+Entity <instruction_memo> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/ControlUnit.vhd" in Library work.
+Entity <controlunit> compiled.
+Entity <controlunit> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/instruction_to_reg.vhd" in Library work.
+Entity <instruction_to_reg> compiled.
+Entity <instruction_to_reg> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/sign_extend.vhd" in Library work.
+Entity <sign_extend> compiled.
+Entity <sign_extend> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/shifter_32_32.vhd" in Library work.
+Entity <shifter_32_32> compiled.
+Entity <shifter_32_32> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/ALUCTRL.vhd" in Library work.
+Entity <aluop> compiled.
+Entity <aluop> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/memory.vhd" in Library work.
+Entity <memo> compiled.
+Entity <memo> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS.vhd" in Library work.
+Entity <mips> compiled.
+Entity <mips> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <MIPS> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Adder_32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>) with generics.
+	N = 32
+
+Analyzing hierarchy for entity <PC> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <instruction_memo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ControlUnit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <instruction_to_reg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <sign_extend> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <shifter_32_32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ALUOP> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <memo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>) with generics.
+	N = 5
+
+Analyzing hierarchy for entity <Registers> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <MIPS> in library <work> (Architecture <behavioral>).
+Entity <MIPS> analyzed. Unit <MIPS> generated.
+
+Analyzing Entity <Adder_32> in library <work> (Architecture <behavioral>).
+Entity <Adder_32> analyzed. Unit <Adder_32> generated.
+
+Analyzing generic Entity <mux.1> in library <work> (Architecture <behavioral>).
+	N = 32
+Entity <mux.1> analyzed. Unit <mux.1> generated.
+
+Analyzing Entity <PC> in library <work> (Architecture <behavioral>).
+Entity <PC> analyzed. Unit <PC> generated.
+
+Analyzing Entity <instruction_memo> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/instruction_memo.vhd" line 42: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <MM> may be accessed with an index that does not cover the full array size.
+Entity <instruction_memo> analyzed. Unit <instruction_memo> generated.
+
+Analyzing Entity <ControlUnit> in library <work> (Architecture <behavioral>).
+Entity <ControlUnit> analyzed. Unit <ControlUnit> generated.
+
+Analyzing Entity <instruction_to_reg> in library <work> (Architecture <behavioral>).
+Entity <instruction_to_reg> analyzed. Unit <instruction_to_reg> generated.
+
+Analyzing generic Entity <mux.2> in library <work> (Architecture <behavioral>).
+	N = 5
+Entity <mux.2> analyzed. Unit <mux.2> generated.
+
+Analyzing Entity <Registers> in library <work> (Architecture <behavioral>).
+Entity <Registers> analyzed. Unit <Registers> generated.
+
+Analyzing Entity <sign_extend> in library <work> (Architecture <behavioral>).
+Entity <sign_extend> analyzed. Unit <sign_extend> generated.
+
+Analyzing Entity <shifter_32_32> in library <work> (Architecture <behavioral>).
+Entity <shifter_32_32> analyzed. Unit <shifter_32_32> generated.
+
+Analyzing Entity <ALUOP> in library <work> (Architecture <behavioral>).
+Entity <ALUOP> analyzed. Unit <ALUOP> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing Entity <memo> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/memory.vhd" line 50: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <MM> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/memory.vhd" line 56: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <MM> may be accessed with an index that does not cover the full array size.
+Entity <memo> analyzed. Unit <memo> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Adder_32>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/Adder_32.vhd".
+    Found 32-bit adder for signal <sum>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Adder_32> synthesized.
+
+
+Synthesizing Unit <mux_1>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/mux.vhd".
+Unit <mux_1> synthesized.
+
+
+Synthesizing Unit <PC>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/PC.vhd".
+    Found 32-bit register for signal <outp>.
+    Found 32-bit register for signal <tmp>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <PC> synthesized.
+
+
+Synthesizing Unit <instruction_memo>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/instruction_memo.vhd".
+WARNING:Xst:1781 - Signal <MM> is used but never assigned. Tied to default value.
+    Found 24x8-bit ROM for signal <Instruction_31_24$varindex0000> created at line 42.
+    Found 23x8-bit ROM for signal <MM$mux0000> created at line 43.
+    Found 22x8-bit ROM for signal <MM$mux0001> created at line 44.
+    Found 21x8-bit ROM for signal <MM$mux0002> created at line 45.
+    Summary:
+	inferred   4 ROM(s).
+Unit <instruction_memo> synthesized.
+
+
+Synthesizing Unit <ControlUnit>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/ControlUnit.vhd".
+    Register <Branch> equivalent to <ALUOp0> has been removed
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUOp0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUOp1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemtoReg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <AluSrc>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <RegWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemRead>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <RegDst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <ControlUnit> synthesized.
+
+
+Synthesizing Unit <sign_extend>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/sign_extend.vhd".
+Unit <sign_extend> synthesized.
+
+
+Synthesizing Unit <shifter_32_32>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/shifter_32_32.vhd".
+WARNING:Xst:647 - Input <A<31:30>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <shifter_32_32> synthesized.
+
+
+Synthesizing Unit <ALUOP>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/ALUCTRL.vhd".
+WARNING:Xst:737 - Found 4-bit latch for signal <op>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <ALUOP> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/alu.vhd".
+    Found 32-bit addsub for signal <resultX$addsub0000>.
+    Found 32-bit comparator less for signal <resultX$cmp_lt0000> created at line 38.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <memo>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/memory.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ReadData_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 288-bit register for signal <MM>.
+    Found 8-bit 35-to-1 multiplexer for signal <MM$mux0000> created at line 51.
+    Found 8-bit 34-to-1 multiplexer for signal <MM$mux0001> created at line 52.
+    Found 8-bit 33-to-1 multiplexer for signal <MM$mux0002> created at line 53.
+    Found 8-bit 36-to-1 multiplexer for signal <ReadData_31_24$varindex0000> created at line 50.
+INFO:Xst:738 - HDL ADVISOR - 288 flip-flops were inferred for signal <MM>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 288 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <memo> synthesized.
+
+
+Synthesizing Unit <mux_2>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/mux.vhd".
+Unit <mux_2> synthesized.
+
+
+Synthesizing Unit <Registers>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/Registers.vhd".
+    Found 32x32-bit dual-port RAM <Mram_regfile> for signal <regfile>.
+    Found 32x32-bit dual-port RAM <Mram_regfile_ren> for signal <regfile>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Registers> synthesized.
+
+
+Synthesizing Unit <instruction_to_reg>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/instruction_to_reg.vhd".
+WARNING:Xst:647 - Input <Instruction<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Instruction<10:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <instruction_to_reg> synthesized.
+
+
+Synthesizing Unit <MIPS>.
+    Related source file is "C:/Users/vboxuser/Desktop/OmarKhaled_222000009_2024/OmarKhaled_222000009_2024/MIPS.vhd".
+WARNING:Xst:1780 - Signal <ALUOp1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ALUOp0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <MIPS> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# ROMs                                                 : 4
+ 21x8-bit ROM                                          : 1
+ 22x8-bit ROM                                          : 1
+ 23x8-bit ROM                                          : 1
+ 24x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+# Registers                                            : 38
+ 32-bit register                                       : 2
+ 8-bit register                                        : 36
+# Latches                                              : 41
+ 1-bit latch                                           : 40
+ 4-bit latch                                           : 1
+# Comparators                                          : 1
+ 32-bit comparator less                                : 1
+# Multiplexers                                         : 4
+ 8-bit 33-to-1 multiplexer                             : 1
+ 8-bit 34-to-1 multiplexer                             : 1
+ 8-bit 35-to-1 multiplexer                             : 1
+ 8-bit 36-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <adder4> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <muxpc> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <PCI> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <InstructionMemo> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Control> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <InstReg> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <InsSignExtend> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <muxreg> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Shifter_Inst_SignExtend> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <PCShiftLeftAdd> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AluControl> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <ALUafterReg> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <DataMemory> is unconnected in block <MIPS>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <MuxAfterMemory> is unconnected in block <MIPS>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <Registers>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regfile> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteReg>      |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <ReadReg1>      |          |
+    |     doB            | connected to signal <ReadData1>     |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regfile_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteReg>      |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <ReadReg2>      |          |
+    |     doB            | connected to signal <ReadData2>     |          |
+    -----------------------------------------------------------------------
+Unit <Registers> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port distributed RAM                   : 2
+# ROMs                                                 : 4
+ 21x8-bit ROM                                          : 1
+ 22x8-bit ROM                                          : 1
+ 23x8-bit ROM                                          : 1
+ 24x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+# Registers                                            : 352
+ Flip-Flops                                            : 352
+# Latches                                              : 41
+ 1-bit latch                                           : 40
+ 4-bit latch                                           : 1
+# Comparators                                          : 1
+ 32-bit comparator less                                : 1
+# Multiplexers                                         : 18
+ 1-bit 35-to-1 multiplexer                             : 8
+ 1-bit 36-to-1 multiplexer                             : 8
+ 8-bit 33-to-1 multiplexer                             : 1
+ 8-bit 34-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <op_3> (without init value) has a constant value of 0 in block <ALUOP>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <MIPS> ...
+
+Optimizing unit <PC> ...
+
+Optimizing unit <ControlUnit> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <memo> ...
+
+Optimizing unit <ALUOP> ...
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren8> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren9> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren12> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren10> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren11> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren15> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren13> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren14> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren18> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren16> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren17> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren19> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren20> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren21> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren22> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren25> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren23> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren24> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren28> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren26> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren27> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren31> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren29> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren30> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren34> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren32> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren33> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren37> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren35> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren36> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren40> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren38> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren39> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren43> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren41> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren42> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren44> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren45> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren46> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren47> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren50> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren48> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren49> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren53> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren51> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren52> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren56> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren54> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren55> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren59> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren57> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren58> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren62> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren60> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren61> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren63> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile_ren64> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile9> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile8> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile12> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile10> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile11> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile15> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile13> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile14> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile18> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile16> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile17> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile21> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile19> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile20> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile22> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile23> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile24> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile25> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile28> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile26> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile27> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile31> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile29> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile30> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile34> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile32> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile33> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile37> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile35> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile36> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile40> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile38> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile39> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile43> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile41> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile42> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile46> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile44> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile45> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile47> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile48> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile49> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile50> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile53> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile51> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile52> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile56> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile54> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile55> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile59> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile57> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile58> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile62> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile60> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile61> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile63> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <InstReg/register_file/Mram_regfile64> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_31> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_30> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_29> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_28> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_27> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_26> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_25> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_24> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_23> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_22> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_21> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_20> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_19> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_18> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_17> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_16> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_15> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_14> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_13> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_12> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_11> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_10> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_9> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_8> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/outp_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_31> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_30> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_29> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_28> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_27> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_26> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_25> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_24> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_23> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_22> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_21> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_20> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_19> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_18> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_17> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_16> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_15> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_14> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_13> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_12> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_11> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_10> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_9> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_8> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PCI/tmp_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/ALUOp0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/ALUOp1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/MemtoReg> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/AluSrc> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/RegWrite> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/MemRead> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/MemWrite> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Control/RegDst> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_14> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_20> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_15> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_21> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_16> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_22> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_17> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_23> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_18> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_24> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_19> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_30> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_25> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_31> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_26> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_27> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_28> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_29> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_8> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_10> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_9> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_11> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_12> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/ReadData_13> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_14_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_12_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_13_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_11_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_10_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_9_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_8_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_7_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_5_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_6_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_4_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_3_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_2_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_1_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_0_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_34_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_35_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_29_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_33_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_28_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_32_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_27_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_31_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_26_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_30_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_25_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_24_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_19_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_23_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_18_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_22_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_17_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_21_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_16_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_15_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <DataMemory/MM_20_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <AluControl/op_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <AluControl/op_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <AluControl/op_0> of sequential type is unconnected in block <MIPS>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MIPS, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MIPS.ngr
+Top Level Output File Name         : MIPS
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 1
+
+Cell Usage :
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                        0  out of   4656     0%  
+ Number of IOs:                           1
+ Number of bonded IOBs:                   0  out of    232     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.16 secs
+ 
+--> 
+
+Total memory usage is 294276 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  588 (   0 filtered)
+Number of infos    :   16 (   0 filtered)
+

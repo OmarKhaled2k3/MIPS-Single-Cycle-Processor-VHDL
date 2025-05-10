@@ -1,0 +1,36 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/New folder/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to D:/New folder/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/ALUOP is now defined in a different file.  It was defined in "D:/OmarKhaled/OmarKhaled222000009/ALUCTRL.vhd", and is now defined in "D:/New folder/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/ALUCTRL.vhd".
+WARNING:HDLParsers:3607 - Unit work/ALUOP/Behavioral is now defined in a different file.  It was defined in "D:/OmarKhaled/OmarKhaled222000009/ALUCTRL.vhd", and is now defined in "D:/New folder/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/ALUCTRL.vhd".
+Compiling vhdl file "D:/New folder/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/ALUCTRL.vhd" in Library work.
+Architecture behavioral of Entity aluop is up to date.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.55 secs
+ 
+--> 
+
+Total memory usage is 4468940 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

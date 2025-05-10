@@ -1,0 +1,3 @@
+vhdl work "Registers.vhd"
+vhdl work "mux.vhd"
+vhdl work "instruction_to_reg.vhd"

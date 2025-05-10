@@ -1,0 +1,5 @@
+set -tmpdir "D:/OmarKhaled/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/xst/projnav.tmp"
+set -xsthdpdir "D:/OmarKhaled/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/xst"
+elaborate
+-ifn Adder_32.prj
+-ifmt mixed

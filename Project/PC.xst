@@ -1,0 +1,5 @@
+set -tmpdir "D:/New folder (2)/MIPS Project 3/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/xst/projnav.tmp"
+set -xsthdpdir "D:/New folder (2)/MIPS Project 3/MIPS Project/MIPS Lab 10th week/OmarKhaled/OmarKhaled222000009/xst"
+elaborate
+-ifn PC.prj
+-ifmt mixed

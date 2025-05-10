@@ -1,0 +1,5 @@
+set -tmpdir "//VBOXSVR/MIPS_Lab_10th_week/OmarKhaled/OmarKhaled222000009/xst/projnav.tmp"
+set -xsthdpdir "//VBOXSVR/MIPS_Lab_10th_week/OmarKhaled/OmarKhaled222000009/xst"
+elaborate
+-ifn instruction_memo.prj
+-ifmt mixed
